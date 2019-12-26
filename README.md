@@ -4,26 +4,28 @@
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|username|string|null: false|
+|name|string|null: false|
 ### Association
 - has_many :groups, through: :users_groups
 - has_many :tweets
+- has_many :users_groups
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group|text|null: false|
-|username|string|null: false|
+|name|string|null: false|
 ### Association
-- belongs_to :user
 - has_many :users, through: :users_groups
 - has_many  :tweets
+- has_many :users_groups
 
 ## tweetsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
-|image|text|null: false|
+|text|text|
+|image|text|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
