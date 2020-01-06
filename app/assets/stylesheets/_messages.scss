@@ -35,16 +35,20 @@
   &__group-list{
     background-color: #2f3e51;
     height: calc(100vh - 100px);
+    padding: 20px 20px 0;
     color: #ffffff;
   }
-    &__group-list-name{
-      padding: 20px 20px 5px 20px;
-      font-size: 15px;
+    a {
+      text-decoration: none;
     }
-    &__group-list-message{
-      font-size: 11px;
-      padding: 0px 20px 40px;
-    }
+      &__name{
+        padding: 20px 20px 5px 20px;
+        font-size: 15px;
+      }
+      &__message{
+        font-size: 11px;
+        padding: 0px 20px 40px;
+      }
 }
 .main-chat {
   width: calc(100vw - 300px);
