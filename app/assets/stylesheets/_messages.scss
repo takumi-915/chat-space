@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+a{
+  text-decoration: none;
+}
+
 .wrapper {
   display: flex;
   height: 100vh;
@@ -37,10 +41,12 @@
     height: calc(100vh - 100px);
     padding: 20px 20px 0;
     color: #ffffff;
-  }
-    a {
-      text-decoration: none;
+    &__group{
+      margin-bottom: 40px;
     }
+    // a {
+    //   text-decoration: none;
+    // }
       &__name{
         padding: 20px 20px 5px 20px;
         font-size: 15px;
@@ -49,6 +55,7 @@
         font-size: 11px;
         padding: 0px 20px 40px;
       }
+  }
 }
 .main-chat {
   width: calc(100vw - 300px);
@@ -60,6 +67,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
+    
     &__leftbox{
       font-size: 20px; 
       color: #333333;
@@ -79,12 +87,17 @@
       margin-top: 30px;
       line-height: 40px;
       height: 45px;
+      a{
+        text-decoration: none;
+        color: #38aef0;
+      }
     }
   }
   &__message-list{
     background-color: #fafafa;
     height: calc(100vh - 190px);
     padding: 46px 40px;
+    overflow: scroll;
     &__messagebox{
       padding-bottom: 40px;
       &__2{
@@ -131,14 +144,14 @@
     background-color: #d2d2d2;
     height: 90px;
     padding: 20px 40px;
-
+    
     form {
       display: flex;
       .input-box{
         position: relative;
         display: flex;
         width: 100%;
-        &__text{
+        &__new-message{
           color: #434a54;
           height: 50px;
           width: 100%;
@@ -151,6 +164,7 @@
           right: 10px;
           cursor: pointer;
           font-size: 1.3rem;
+          padding: 5px;
           &__file{
             display: none;
           }
