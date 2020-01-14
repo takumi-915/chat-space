@@ -79,6 +79,9 @@ $(function(){
        });
        $('.main-chat__message-list').append(insertHTML);
        $('.main-chat__message-list').animate({ scrollTop: $('.main-chat__message-list')[0].scrollHeight});
+       $('form')[0].reset();
+       $('.submit-btn').attr('disabled', false);
+       
     })
     .fail(function() {
       alert("メッセージ更新に失敗しました");
