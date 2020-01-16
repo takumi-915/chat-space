@@ -23,7 +23,7 @@ set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
 
 # Unicornの設定ファイルの場所
 set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
-set :keep_releases, 
+set :keep_releases, 5
 set :linked_files, %w{ config/secrets.yml }
 
 
